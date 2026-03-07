@@ -1,0 +1,17 @@
+{
+  "name": "accent-recording-studio",
+  "version": "1.0.0",
+  "description": "Accent Recording Studio - Professional recording studio website in Plzeň",
+  "scripts": {
+    "dev": "npx serve . -p 8080",
+    "build": "echo 'Static site - no build required'",
+    "preview": "npx serve . -p 8080"
+  },
+  "keywords": [
+    "recording-studio",
+    "plzen",
+    "accent"
+  ],
+  "author": "Accent Recording Studio",
+  "license": "ISC"
+}
