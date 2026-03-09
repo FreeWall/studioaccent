@@ -1,14 +1,12 @@
 import type { NextConfig } from "next";
+import { PHASE_PRODUCTION_BUILD } from "next/constants";
 
-const nextConfig: NextConfig = {
+const nextConfig = (stage: string) => ({
+  distDir: stage == PHASE_PRODUCTION_BUILD ? 'build' : '.next',
   output: "export",
-  trailingSlash: true,
-  // basePath pro GitHub Pages: /studioaccent
-  // Pro lokální dev bez basePath: NEXT_PUBLIC_BASE_PATH=""
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? "/studioaccent",
   images: {
-    unoptimized: true, // nutné pro statický export
+    unoptimized: true,
   },
-};
+} satisfies NextConfig);
 
 export default nextConfig;

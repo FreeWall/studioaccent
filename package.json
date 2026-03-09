@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "export": "next build && touch ./build/.nojekyll",
+    "lint": "eslint",
+    "deploy": "yarn install --frozen-lockfile && yarn export"
   },
   "dependencies": {
     "next": "16.1.6",
