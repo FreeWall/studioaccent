@@ -3,6 +3,7 @@ import { PHASE_PRODUCTION_BUILD } from "next/constants";
 
 const nextConfig = (stage: string) => ({
   distDir: stage == PHASE_PRODUCTION_BUILD ? 'build' : '.next',
+  basePath: '/studioaccent',
   output: "export",
   images: {
     unoptimized: true,
