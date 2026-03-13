@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import FadeUp from "@/components/FadeUp";
+import { withBase } from "@/utils/paths";
 
 const badge = (text: string) => (
   <span className="inline-block px-3 py-1 mb-4 bg-[rgba(212,160,23,0.15)] border border-[rgba(212,160,23,0.35)] rounded-full text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#f0c040]">
@@ -25,7 +26,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/images/studio/control_room.jpg')",
+            backgroundImage: `url('${withBase("/images/studio/control_room.jpg")}')`,
             filter: "brightness(0.35) saturate(0.7)",
           }}
         />
@@ -124,7 +125,7 @@ export default function HomePage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Image
-                src="/images/studio/main_studio.jpg"
+                src={withBase("/images/studio/main_studio.jpg")}
                 alt="Řídicí místnost studia Accent"
                 width={600}
                 height={480}
@@ -189,7 +190,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <Image
-                src="/images/studio/vocal_booth.jpg"
+                src={withBase("/images/studio/vocal_booth.jpg")}
                 alt="Nahrávání v studiovém kabině"
                 width={600}
                 height={480}

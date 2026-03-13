@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FadeUp from "@/components/FadeUp";
+import { withBase } from "@/utils/paths";
 
 export const metadata: Metadata = {
   title: "Studio – Accent Recording Studio",
@@ -40,12 +41,12 @@ const accentLine = (
 );
 
 const galleryImages = [
-  { src: "/images/studio/control_room.jpg", alt: "Hlavní režie – pohled na pracoviště" },
-  { src: "/images/studio/main_studio.jpg", alt: "Nahrávací místnost – hlavní prostor" },
-  { src: "/images/studio/vocal_booth.jpg", alt: "Nahrávací kabina – detail" },
-  { src: "/images/studio/equipment_rack.jpg", alt: "Hardware rack – technické vybavení" },
-  { src: "/images/studio/microphones.jpg", alt: "Mikrofonní park – Neumann, AKG" },
-  { src: "/images/studio/drums.jpg", alt: "Bicí nástroj v nahrávacím prostoru" },
+  { src: withBase("/images/studio/control_room.jpg"), alt: "Hlavní režie – pohled na pracoviště" },
+  { src: withBase("/images/studio/main_studio.jpg"), alt: "Nahrávací místnost – hlavní prostor" },
+  { src: withBase("/images/studio/vocal_booth.jpg"), alt: "Nahrávací kabina – detail" },
+  { src: withBase("/images/studio/equipment_rack.jpg"), alt: "Hardware rack – technické vybavení" },
+  { src: withBase("/images/studio/microphones.jpg"), alt: "Mikrofonní park – Neumann, AKG" },
+  { src: withBase("/images/studio/drums.jpg"), alt: "Bicí nástroj v nahrávacím prostoru" },
 ];
 
 export default function StudioPage() {
@@ -63,7 +64,7 @@ export default function StudioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <Image
-                src="/images/studio/control_room.jpg"
+                src={withBase("/images/studio/control_room.jpg")}
                 alt="Řídicí místnost studia Accent"
                 width={600}
                 height={480}
@@ -135,7 +136,7 @@ export default function StudioPage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Image
-                src="/images/studio/vocal_booth.jpg"
+                src={withBase("/images/studio/vocal_booth.jpg")}
                 alt="Nahrávací kabina studia Accent"
                 width={600}
                 height={480}

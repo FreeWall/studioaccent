@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import FadeUp from "@/components/FadeUp";
+import { withBase } from "@/utils/paths";
 
 export const metadata: Metadata = {
   title: "Karaoke Produkce – Accent Recording Studio",
@@ -49,7 +50,7 @@ export default function KaraokePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <Image
-                src="/images/karaoke_stage.png"
+                src={withBase("/images/karaoke_stage.png")}
                 alt="Karaoke show na pódiu"
                 width={600}
                 height={480}
@@ -203,7 +204,7 @@ export default function KaraokePage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Image
-                src="/images/karaoke_stage.png"
+                src={withBase("/images/karaoke_stage.png")}
                 alt="Karaoke live show"
                 width={600}
                 height={480}
