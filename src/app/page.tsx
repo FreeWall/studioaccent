@@ -25,7 +25,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 bg-cover bg-center scale-105"
           style={{
-            backgroundImage: "url('/images/studio_hero.png')",
+            backgroundImage: "url('/images/studio/control_room.jpg')",
             filter: "brightness(0.35) saturate(0.7)",
           }}
         />
@@ -124,7 +124,7 @@ export default function HomePage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Image
-                src="/images/studio_hero.png"
+                src="/images/studio/main_studio.jpg"
                 alt="Řídicí místnost studia Accent"
                 width={600}
                 height={480}
@@ -189,7 +189,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <Image
-                src="/images/studio_booth.png"
+                src="/images/studio/vocal_booth.jpg"
                 alt="Nahrávání v studiovém kabině"
                 width={600}
                 height={480}

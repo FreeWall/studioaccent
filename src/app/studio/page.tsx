@@ -40,12 +40,12 @@ const accentLine = (
 );
 
 const galleryImages = [
-  { src: "/images/studio_hero.png", alt: "Řídicí místnost – pohled shora" },
-  { src: "/images/studio_booth.png", alt: "Nahrávací kabina" },
-  { src: "/images/studio_hero.png", alt: "Mixpult detail" },
-  { src: "/images/studio_booth.png", alt: "Hardware rack" },
-  { src: "/images/studio_hero.png", alt: "Referenční monitory" },
-  { src: "/images/studio_booth.png", alt: "Nahrávání v kabině" },
+  { src: "/images/studio/control_room.jpg", alt: "Hlavní režie – pohled na pracoviště" },
+  { src: "/images/studio/main_studio.jpg", alt: "Nahrávací místnost – hlavní prostor" },
+  { src: "/images/studio/vocal_booth.jpg", alt: "Nahrávací kabina – detail" },
+  { src: "/images/studio/equipment_rack.jpg", alt: "Hardware rack – technické vybavení" },
+  { src: "/images/studio/microphones.jpg", alt: "Mikrofonní park – Neumann, AKG" },
+  { src: "/images/studio/drums.jpg", alt: "Bicí nástroj v nahrávacím prostoru" },
 ];
 
 export default function StudioPage() {
@@ -63,7 +63,7 @@ export default function StudioPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <Image
-                src="/images/studio_hero.png"
+                src="/images/studio/control_room.jpg"
                 alt="Řídicí místnost studia Accent"
                 width={600}
                 height={480}
@@ -135,7 +135,7 @@ export default function StudioPage() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <Image
-                src="/images/studio_booth.png"
+                src="/images/studio/vocal_booth.jpg"
                 alt="Nahrávací kabina studia Accent"
                 width={600}
                 height={480}
